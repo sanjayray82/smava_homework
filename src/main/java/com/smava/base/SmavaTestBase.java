@@ -14,6 +14,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
+
 public class SmavaTestBase {
 	public static WebDriver driver;
 	public static Properties prop;
@@ -43,18 +44,13 @@ public class SmavaTestBase {
 		String browserName= prop.getProperty("browser");
 		
 		if(browserName.equals("Chrome")) {
-			System.setProperty(prop.getProperty("chromeDriver"),prop.getProperty("ChromeDriverPath"));
+			System.setProperty(prop.getProperty("chromeDriver"),System.getProperty("user.dir")+"/src/main/java/com/smava/config/chromedriver.exe");
 			driver= new ChromeDriver();
 			driver.manage().window().maximize();
 			
 		}
-		else if (browserName.equals("FF")) {
-			System.setProperty(prop.getProperty("ffDriver"),prop.getProperty("ffDriverPath"));
-			driver= new FirefoxDriver();
-			 driver.manage().window().maximize();
-			
-		}
-		  
+		 
+				  
 		  driver.manage().deleteAllCookies();
 		  driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
