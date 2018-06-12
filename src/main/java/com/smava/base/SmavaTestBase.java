@@ -13,8 +13,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-
-
 public class SmavaTestBase {
 	public static WebDriver driver;
 	public static Properties prop;
