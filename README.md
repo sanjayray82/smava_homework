@@ -23,7 +23,7 @@ From a very high level, the capabilities covered:
 
 1. Download smava_homework project from GITHUB  https://github.com/sanjayray82/smava_homework in your system
 2. Make sure JAVA_HOME & M2_HOME is setup in your system envrionment property.
-3. Goto the directory where you have downloaded and copied smava_homework folder, go inside a folder to ensure pom.xml is present.
+3. Goto the directory where you have downloaded and copied "smava_homework-master" folder, go inside a folder to ensure pom.xml is present.
 4. Run> mvn clean install in command line from the folder where you have pom.xml.
 
 #Pre-requisite
